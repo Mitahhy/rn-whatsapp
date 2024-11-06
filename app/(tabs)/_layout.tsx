@@ -1,37 +1,86 @@
+import { View, Text } from 'react-native'
+import React from 'react'
+import className from "twrnc";
 import { Tabs } from 'expo-router';
-import React from 'react';
+import ChatIcon from '@/assets/icons/ChatIcon';
+import Status from '@/assets/icons/Status';
+import CallsIcon from '@/assets/icons/CallsIcon';
+import CommunitiesIcon from '@/assets/icons/CommunitiesIcon';
 
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+const ChatIconFun = () => {
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-      }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
-          ),
-        }}
-      />
-    </Tabs>
-  );
+    <View>
+      <ChatIcon />
+    </View>
+  )
 }
+
+const UpdatesIconFun = () => {
+  return (
+    <View>
+      <Status />
+    </View>
+  )
+}
+
+const CommunitiesIconFun = () => {
+  return (
+    <View>
+      <CommunitiesIcon />
+    </View>
+  )
+}
+
+const CallsIconFun = () => {
+  return (
+    <View>
+      <CallsIcon />
+    </View>
+  )
+}
+
+const Layout = () => {
+  return (
+    <Tabs sceneContainerStyle={className`bg-black`}
+    screenOptions={{
+      tabBarStyle:{
+        height:90,
+        padding:20,
+        backgroundColor:'black',
+      },
+      tabBarLabelStyle:{
+        fontSize:17,
+        fontWeight:500,
+        color:'white',
+      },
+      headerShown:false
+    }}
+    >
+      <Tabs.Screen name='index' options={{
+        tabBarLabel: 'Chat',
+        headerTitle: 'Chat',
+        tabBarIcon: ChatIconFun
+      }} />
+
+      <Tabs.Screen name='updates' options={{
+        tabBarLabel: 'Updates',
+        headerTitle: 'Updates',
+        tabBarIcon: UpdatesIconFun
+      }} />
+
+      <Tabs.Screen name='communities' options={{
+        tabBarLabel: 'Communities',
+        headerTitle: 'Communities',
+        tabBarIcon: CommunitiesIconFun
+      }} />
+
+      <Tabs.Screen name='calls' options={{
+        tabBarLabel: 'Calls',
+        headerTitle: 'Calls',
+        tabBarIcon: CallsIconFun
+      }} />
+    </Tabs>
+  )
+}
+
+export default Layout
