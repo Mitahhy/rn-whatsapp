@@ -1,9 +1,10 @@
-import { View, Text, FlatList } from 'react-native'
+import { View, Text, FlatList, Pressable } from 'react-native'
 import React from 'react'
 import className from 'twrnc'
 import Header from '@/components/Header'
 import ChatItem from '@/components/ChatItem'
 import chatItems from '@/assets/data/chatItems.json'
+import ChatIcon from '@/assets/icons/ChatIcon'
 
 const index = () => {
   return (
@@ -13,8 +14,11 @@ const index = () => {
       data={chatItems} renderItem={({item})=>(
         <ChatItem source={item.image} name={item.name}
         message={item.message} date={item.date}/>
-      )}
-      />
+      )}/>
+      <Pressable style={className`bg-green-500 p-3 rounded-xl 
+        absolute bottom-6 right-2`}>
+        <ChatIcon/>
+      </Pressable>
     </View>
   )
 }

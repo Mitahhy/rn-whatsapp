@@ -26,47 +26,5 @@
         "message":"Hello Gys! What is a new ?",
         "date":"12/10/2022",
         "image":"assets/images/money_80px.png"
-    },
-    {
-        "id":5,
-        "name":" Nathanael",
-        "message":"Hello Gys! What is a new ?",
-        "date":"12/10/2022",
-        "image":"assets/images/money_80px.png"
-    },
-    {
-        "id":6,
-        "name":"Will Smith",
-        "message":"Hello Gys! What is a new ?",
-        "date":"12/10/2022",
-        "image":"assets/images/money_80px.png"
-    },
-    {
-        "id":7,
-        "name":"Sharen Ed",
-        "message":"Hello Gys! What is a new ?",
-        "date":"12/10/2022",
-        "image":"assets/images/money_80px.png"
-    },
-    {
-        "id":8,
-        "name":"Jordan Michel",
-        "message":"Hello Gys! What is a new ?",
-        "date":"12/10/2022",
-        "image":"assets/images/money_80px.png"
-    },
-    {
-        "id":9,
-        "name":"Jasun Tatum",
-        "message":"Hello Gys! What is a new ?",
-        "date":"12/10/2022",
-        "image":"assets/images/money_80px.png"
-    },
-    {
-        "id":10,
-        "name":"Chris Paul",
-        "message":"Hello Gys! What is a new ?",
-        "date":"12/10/2022",
-        "image":"assets/images/money_80px.png"
     }
 ]
