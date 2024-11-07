@@ -3,6 +3,7 @@ import React from 'react'
 import className from 'twrnc'
 import data from '../assets/data/chatItems.json'
 import CallsIcon from '@/assets/icons/CallsIcon'
+import PressableCalls from './PressableCalls'
 
 const CallsItem = ({source, title, message}) => {
   return (
@@ -15,7 +16,7 @@ const CallsItem = ({source, title, message}) => {
                 <Text style={className`text-gray-500 text-lg`}>{message}
                 </Text>
             </View>
-            <CallsIcon />
+            <PressableCalls />
         </View>
   )
 }

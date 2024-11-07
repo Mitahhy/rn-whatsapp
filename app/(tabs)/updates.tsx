@@ -6,6 +6,7 @@ import MyStatus from '@/components/MyStatus'
 import data from '@/assets/data/channelItems.json'
 import ChatItem from '@/components/ChatItem'
 import CameraIcon from '@/assets/icons/CameraIcon'
+import { router } from 'expo-router'
 
 const updates = () => {
   return (
@@ -26,7 +27,7 @@ const updates = () => {
       <FlatList data={data} style={className`flex-col gap-5 pt-5`} 
       renderItem={({item}) => <ChatItem source={item.image} 
       name={item.name} message={item.message} date={item.date}/> } />
-       <Pressable style={className`bg-green-500 p-3 rounded-xl 
+       <Pressable onPress={() => router.push('/cameraScreen')} style={className`bg-green-500 p-3 rounded-xl 
         absolute bottom-[-55px] right-2`}>
         <CameraIcon/>
       </Pressable>
